@@ -214,12 +214,12 @@ https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/ride%20duration.png
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
   write.csv(total_riders, "total_riders.csv", row.names = FALSE)
-  
+https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/total%20riders.png  
 ```
 
 We export to Tableau for further visualization.
 
-! [] (/main/imagesc/dashboard.png)
+
 
 ## Observation
   
