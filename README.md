@@ -251,9 +251,9 @@ We export to Tableau for further visualization.
 ## Observation
   
   * Members had the highest number of rides. Members total ride is 
-approximately 2 million rides which is 59% of total rides.
+  approximately 2 million rides which is 59% of total rides.
 
-Casual riders had approximately 1.5 million rides which is 41% of total rides.
+  * Casual riders had approximately 1.5 million rides which is 41% of total rides.
 
   * Docked bike is more popular between members and casual riders.
    *  Casual Riders take longer rides during the weekdays. The rides are longest 
