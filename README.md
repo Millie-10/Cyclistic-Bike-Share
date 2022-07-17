@@ -215,7 +215,7 @@ total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
 
 We export to Tableau for further visualization.
 
-(https://github.com/Millie-10/Cyclistic-Bike-Share/commit/0c57fb1d90b738a64c78d7715a3ff6be0bdfe954#diff-2a400b75d2baf84bcacb7f876be2444d494f9ba9d34d05c32f75d9ec5adeb11b)
+(https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/imagesc/dashboard.png)
 
 ## Observation
   
