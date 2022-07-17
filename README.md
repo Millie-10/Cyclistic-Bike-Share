@@ -200,7 +200,7 @@ bike_type_preference <- bike_rides_cleaned %>%
   group_by(member_casual,rideable_type,day_of_week) %>%
   summarise(number_of_rides = n(), avg_ride_length = mean(ride_length))
   write.csv(bike_type_preference, "bike_type_preference.csv", row.names = FALSE)
-
+/../bike%20preference.png
 ```
 ```{r}
 ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
