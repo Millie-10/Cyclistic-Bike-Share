@@ -209,10 +209,12 @@ ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
 write.csv(ride_length_by_month, "ride_length_by_month.csv", row.names = FALSE)
 ```
 https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/number%20of%20rides%20per%20month.png
+https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/ride%20duration.png
 ```{r}
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
   write.csv(total_riders, "total_riders.csv", row.names = FALSE)
+  
 ```
 
 We export to Tableau for further visualization.
