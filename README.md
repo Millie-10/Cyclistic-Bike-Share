@@ -208,6 +208,7 @@ ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
    arrange(month)
 write.csv(ride_length_by_month, "ride_length_by_month.csv", row.names = FALSE)
 ```
+https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/number%20of%20rides%20per%20month.png
 ```{r}
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
