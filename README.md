@@ -21,6 +21,7 @@ full-day passes are referred to as casual riders. Customers who purchase annual
 memberships are Cyclistic members.
 
 
+
 Cyclistic’s finance analysts have concluded that annual members are much more
 profitable than casual riders. Although the pricing flexibility helps Cyclistic
 attract more customers, Moreno believes that maximizing the number of annual
@@ -31,6 +32,7 @@ aware of the Cyclistic program and have chosen Cyclistic for their mobility
 needs.
 
 
+
 Moreno, the director of marketing, has set a clear goal: Design marketing
 strategies aimed at converting casual riders into annual members. In order to
 do that, however, the marketing analyst team needs to better understand how
@@ -39,6 +41,8 @@ membership, and how digital media could affect their marketing tactics. Moreno
 and her team are interested in analyzing the Cyclistic historical bike trip data
 to identify trends.
 
+
+
 As a junior data analyst working in the marketing analyst team at Cyclistic,
 The director of marketing, Moreno, believes the company’s future success depends
 on maximizing the number of annual memberships. Therefore,the team wants to
@@ -46,16 +50,19 @@ understand how casual riders and annual members use Cyclistic bikes differently.
 From these insights, the team will design a new marketing strategy to convert
 casual riders into annual members.
 
+
 ### **Business** **Task**
 
 How do annual members and casual riders use Cyclistic bikes differently?
 Use Cyclistic’s historical trip data to analyze and identify trends.
+
 
 ### **Key** **Stakeholders**
 
       Lily Moreno
       Cyclistic marketing analytics team
       Cyclistic executive team
+
 
 ### **Data** **Background**
 
@@ -101,6 +108,7 @@ ds12<- read.csv("march_2021_trip.csv")
 
 We look at the structure of the datasets using the str() and also look at
 the first 6 rows using the glimpse(). 
+
 ```{r}
 str(ds1)
 glipmse(ds1)
@@ -142,6 +150,7 @@ have 3489748 rows and 13 columns. We check for structural errors.
 we can see that the started_at and ended_at columns are formatted as character,
 so we change it to date time. We can also see that the column names like 
 member_casual and rideable_type are not properly named.
+
 
 ### Data Cleaning.
 
@@ -201,7 +210,9 @@ label =  TRUE, week_start = getOption("lubridate.week.start" , 7))) %>%
   avg_ride_length = mean(ride_length))
 write.csv(day_of_week_summary, "day_of_week_summary.csv", row.names = FALSE)
 ```
+
 ![weeek](no%20of%20rides%20per%20week.png)
+
 
 ```{r}
 bike_type_preference <- bike_rides_cleaned %>%
@@ -209,21 +220,29 @@ bike_type_preference <- bike_rides_cleaned %>%
   summarise(number_of_rides = n(), avg_ride_length = mean(ride_length))
   write.csv(bike_type_preference, "bike_type_preference.csv", row.names = FALSE)
 ```
+
 ![bike](bike%20preference.png)
+
 ```{r}
 ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
    summarise(number_of_rides = n(),mean_ride_length = mean(ride_length)) %>%
    arrange(month)
 write.csv(ride_length_by_month, "ride_length_by_month.csv", row.names = FALSE)
 ```
+
 ![number](number%20of%20rides%20per%20month.png)
+
+
 ![duration](ride%20duration.png)
+
 ```{r}
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
   write.csv(total_riders, "total_riders.csv", row.names = FALSE)  
 ```
+
 ![riders](total%20riders.png)
+
 We export to Tableau for further visualization.
 ### Dashboard
 
@@ -253,9 +272,9 @@ To confirm this we have to analyze data from previous years.
 
 ## Recommendations
 
-The marketing team should create a coupon or voucher that gives a discount to
+  * The marketing team should create a coupon or voucher that gives a discount to
 registered annual riders with trips that last more than 20 minutes.Since casual
 riders take longer trips, this will encourage them to register as annual users.
 
-They can share fliers and run promotions on the annual tickets at the stations
+  * They can share fliers and run promotions on the annual tickets at the stations
 during the weekends since the casual riders take more rides then.
