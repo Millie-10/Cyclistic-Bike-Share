@@ -215,7 +215,7 @@ total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
 
 We export to Tableau for further visualization.
 
-(imagesc/dashboard.png)
+! [] (/imagesc/dashboard.png)
 
 ## Observation
   
