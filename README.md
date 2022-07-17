@@ -70,25 +70,6 @@ library(tidyverse)
 library(lubridate)
 library(dplyr)
 ```
-Registered S3 methods overwritten by 'dbplyr':
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-── Attaching packages ───────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
-✔ ggplot2 3.3.6     ✔ dplyr   1.0.9
-✔ tibble  3.1.7     ✔ stringr 1.4.0
-✔ tidyr   1.2.0     ✔ forcats 0.5.1
-✔ purrr   0.3.4     
-── Conflicts ──────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-
-Attaching package: ‘lubridate’
-
-The following objects are masked from ‘package:base’:
-
-    date, intersect, setdiff, union
-
 
 *ds1-ds12* were used to name the files after which *bike_rides* was used to bind
 them.
@@ -232,7 +213,9 @@ total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   write.csv(total_riders, "total_riders.csv", row.names = FALSE)
 ```
 
-We export to Tableau for visualization.
+We export to Tableau for further visualization.
+
+(https://github.com/Millie-10/Cyclistic-Bike-Share/commit/0c57fb1d90b738a64c78d7715a3ff6be0bdfe954#diff-2a400b75d2baf84bcacb7f876be2444d494f9ba9d34d05c32f75d9ec5adeb11b)
 
 ## Observation
   
