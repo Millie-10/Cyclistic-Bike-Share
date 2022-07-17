@@ -1,7 +1,7 @@
 # Cyclistic-Bike-Share Chicago
-Google Data Analytics capstone project
-Author : Millicent Ofobuike
-Data Date: April 2020 - March 2021.
+## Google Data Analytics capstone project
+### Author : Millicent Ofobuike
+#### Data Date: April 2020 - March 2021.
 
 ### Introduction
 
@@ -219,7 +219,7 @@ https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/total%20riders.png
 
 We export to Tableau for further visualization.
 ### Dashboard
-
+https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/imagesc/dashboard.png
 
 ## Observation
   
