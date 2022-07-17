@@ -37,3 +37,27 @@ on maximizing the number of annual memberships. Therefore,the team wants to
 understand how casual riders and annual members use Cyclistic bikes differently.
 From these insights, the team will design a new marketing strategy to convert
 casual riders into annual members.
+
+#### **Business** **Task**
+
+How do annual members and casual riders use Cyclistic bikes differently?
+Use Cyclistic’s historical trip data to analyze and identify trends.
+
+#### **Key** **Stakeholders**
+
+      Lily Moreno
+      Cyclistic marketing analytics team
+      Cyclistic executive team
+
+#### **Data** **Background**
+
+The data is a public data made available by Motivate International Inc. under this 
+license (https://www.divvybikes.com/data-license-agreement). For the sake of 
+privacy, riders personal identifiable information were not included.This is a
+link to the dataset: (https://divvy-tripdata.s3.amazonaws.com/index.html).
+
+I downloaded the previous 12 months of Cyclistic trip data (April 2020-March 2021).
+I unzipped and created a folder in my desktop to house the files.
+
+R was chosen to analyze the data due to the size of the dataframe.
+
