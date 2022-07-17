@@ -193,7 +193,7 @@ label =  TRUE, week_start = getOption("lubridate.week.start" , 7))) %>%
   avg_ride_length = mean(ride_length))
 write.csv(day_of_week_summary, "day_of_week_summary.csv", row.names = FALSE)
 ```
-![image] (/blob/main/no%20of%20rides%20per%20week.png)
+![image] (/main/no%20of%20rides%20per%20week.png)
 
 ```{r}
 bike_type_preference <- bike_rides_cleaned %>%
@@ -216,7 +216,7 @@ total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
 
 We export to Tableau for further visualization.
 
-! [] (/imagesc/dashboard.png)
+! [] (/main/imagesc/dashboard.png)
 
 ## Observation
   
