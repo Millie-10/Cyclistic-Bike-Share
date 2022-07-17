@@ -61,3 +61,12 @@ I unzipped and created a folder in my desktop to house the files.
 
 R was chosen to analyze the data due to the size of the dataframe.
 
+To import and analyze the dataframes, I installed and loaded readr,tidyverse,
+lubridate,dplyr packages.
+
+```{r}
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+```
