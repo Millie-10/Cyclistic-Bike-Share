@@ -5,6 +5,10 @@
 
 ### Introduction
 
+This is a case study project I am to perform data analysis for a fictional 
+bike-share company based in Chicago in order to help them attract more riders.
+
+##### About the Company
 In 2016, Cyclistic launched a successful bike-share offering. Since then,
 the program has grown to a fleet of 5,824 bicycles that are geotracked and
 locked into a network of 692 stations across Chicago. The bikes can be unlocked
@@ -15,6 +19,8 @@ things possible was the flexibility of its pricing plans: single-ride passes,
 full-day passes,and annual memberships. Customers who purchase single-ride or
 full-day passes are referred to as casual riders. Customers who purchase annual
 memberships are Cyclistic members.
+
+
 Cyclistic’s finance analysts have concluded that annual members are much more
 profitable than casual riders. Although the pricing flexibility helps Cyclistic
 attract more customers, Moreno believes that maximizing the number of annual
@@ -23,6 +29,8 @@ that targets all-new customers, Moreno believes there is a very good chance to
 convert casual riders into members. She notes that casual riders are already
 aware of the Cyclistic program and have chosen Cyclistic for their mobility
 needs.
+
+
 Moreno, the director of marketing, has set a clear goal: Design marketing
 strategies aimed at converting casual riders into annual members. In order to
 do that, however, the marketing analyst team needs to better understand how
@@ -38,18 +46,18 @@ understand how casual riders and annual members use Cyclistic bikes differently.
 From these insights, the team will design a new marketing strategy to convert
 casual riders into annual members.
 
-#### **Business** **Task**
+### **Business** **Task**
 
 How do annual members and casual riders use Cyclistic bikes differently?
 Use Cyclistic’s historical trip data to analyze and identify trends.
 
-#### **Key** **Stakeholders**
+### **Key** **Stakeholders**
 
       Lily Moreno
       Cyclistic marketing analytics team
       Cyclistic executive team
 
-#### **Data** **Background**
+### **Data** **Background**
 
 The data is a public data made available by Motivate International Inc. under this 
 license (https://www.divvybikes.com/data-license-agreement). For the sake of 
@@ -135,7 +143,7 @@ we can see that the started_at and ended_at columns are formatted as character,
 so we change it to date time. We can also see that the column names like 
 member_casual and rideable_type are not properly named.
 
-#### Data Cleaning.
+### Data Cleaning.
 
 ###### changing date time to the appropriate structure.
 
@@ -193,7 +201,7 @@ label =  TRUE, week_start = getOption("lubridate.week.start" , 7))) %>%
   avg_ride_length = mean(ride_length))
 write.csv(day_of_week_summary, "day_of_week_summary.csv", row.names = FALSE)
 ```
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/no%20of%20rides%20per%20week.png
+![weeek](no%20of%20rides%20per%20week.png)
 
 ```{r}
 bike_type_preference <- bike_rides_cleaned %>%
@@ -201,25 +209,25 @@ bike_type_preference <- bike_rides_cleaned %>%
   summarise(number_of_rides = n(), avg_ride_length = mean(ride_length))
   write.csv(bike_type_preference, "bike_type_preference.csv", row.names = FALSE)
 ```
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/bike%20preference.png
+![bike](bike%20preference.png)
 ```{r}
 ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
    summarise(number_of_rides = n(),mean_ride_length = mean(ride_length)) %>%
    arrange(month)
 write.csv(ride_length_by_month, "ride_length_by_month.csv", row.names = FALSE)
 ```
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/number%20of%20rides%20per%20month.png
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/ride%20duration.png
+![number](number%20of%20rides%20per%20month.png)
+![duration](ride%20duration.png)
 ```{r}
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
-  write.csv(total_riders, "total_riders.csv", row.names = FALSE)
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/total%20riders.png  
+  write.csv(total_riders, "total_riders.csv", row.names = FALSE)  
 ```
-
+![riders](total%20riders.png)
 We export to Tableau for further visualization.
 ### Dashboard
-https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/imagesc/dashboard.png
+
+![dashboard](imagesc/dashboard.png)
 
 ## Observation
   
