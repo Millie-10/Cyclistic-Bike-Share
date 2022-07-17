@@ -161,7 +161,7 @@ bike_rides$started_at, units = "mins")
 
 ###### We create day_of_week and month dataframes.
 
-```{day_of_week and month}
+```{r}
 bike_rides_cleaned$day_of_week <- weekdays(bike_rides_cleaned$started_at)
 bike_rides_cleaned$month <- format(as.Date(bike_rides_cleaned$started_at), "%b")
 ```
@@ -169,14 +169,14 @@ bike_rides_cleaned$month <- format(as.Date(bike_rides_cleaned$started_at), "%b")
 ###### We clean the data by removing the NAs and ride length < 0.
 we assign the new dataframe's name as *bike_rides_cleaned*.
 
-```{bike_rides_cleaned}  
+```{r}  
 bike_rides_cleaned <- bike_rides %>%
   filter(ride_length > 0)     
 ``` 
 
 ###### After removing NAs we are left with 3,447,610 rows and 16 columns.
 
-```{View} 
+```{r} 
 str(bike_rides_cleaned)     # to view the structure of the data
   View(bike_rides_cleaned)      # to view the data 
 ``` 
@@ -186,29 +186,29 @@ str(bike_rides_cleaned)     # to view the structure of the data
 We have the information we need to understand how the members and casual riders
   use bikes differently. Now we summarize it.
 
-```{summarize and save - day of week}
+```{r}
 day_of_week_summary <- bike_rides_cleaned %>% mutate(day_of_week = wday(started_at,
 label =  TRUE, week_start = getOption("lubridate.week.start" , 7))) %>%
   group_by(member_casual, day_of_week) %>% summarise(number_of_rides = n(),
   avg_ride_length = mean(ride_length))
 write.csv(day_of_week_summary, "day_of_week_summary.csv", row.names = FALSE)
 ```
-![day of week] (https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/no%20of%20rides%20per%20week.png)
+![image] (/blob/main/no%20of%20rides%20per%20week.png)
 
-```{bike_type_preference}
+```{r}
 bike_type_preference <- bike_rides_cleaned %>%
   group_by(member_casual,rideable_type,day_of_week) %>%
   summarise(number_of_rides = n(), avg_ride_length = mean(ride_length))
   write.csv(bike_type_preference, "bike_type_preference.csv", row.names = FALSE)
 
 ```
-```{ride_length_by_month}
+```{r}
 ride_length_by_month <- bike_rides_cleaned %>% group_by(member_casual,month)%>%
    summarise(number_of_rides = n(),mean_ride_length = mean(ride_length)) %>%
    arrange(month)
 write.csv(ride_length_by_month, "ride_length_by_month.csv", row.names = FALSE)
 ```
-```{total riders}
+```{r}
 total_riders <- data.frame (table(bike_rides_cleaned$member_casual))
   hsize <- 1.5
   write.csv(total_riders, "total_riders.csv", row.names = FALSE)
