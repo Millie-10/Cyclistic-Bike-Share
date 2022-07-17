@@ -193,6 +193,7 @@ label =  TRUE, week_start = getOption("lubridate.week.start" , 7))) %>%
   avg_ride_length = mean(ride_length))
 write.csv(day_of_week_summary, "day_of_week_summary.csv", row.names = FALSE)
 ```
+https://github.com/Millie-10/Cyclistic-Bike-Share/blob/main/no%20of%20rides%20per%20week.png
 
 ```{bike_type_preference}
 bike_type_preference <- bike_rides_cleaned %>%
