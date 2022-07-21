@@ -5,7 +5,7 @@
 
 ### Introduction
 
-This is a case study project I am to perform data analysis for a fictional 
+This is a case study project. I am to perform data analysis for a fictional 
 bike-share company based in Chicago in order to help them attract more riders.
 
 ##### About the Company
